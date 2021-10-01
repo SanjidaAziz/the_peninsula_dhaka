@@ -1,0 +1,100 @@
+body{
+overflow-x: hidden;
+color: #000000;
+background-color: #b5acad;
+background-color: #adaaab;
+background-color: #cfcccd;
+background-color: #e8e3e5;
+}
+
+/*   Navbar  */
+.navbar_mystyle{
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+ 
+ // background: rgba(107, 3, 17,0.6)!important; 
+  background: rgba(66, 7, 14,0.6)!important;
+  
+  font-size: 0.8rem;
+}
+
+.nav_logo img{
+  height: 5.5rem;
+
+}
+.nav_lists li{
+  padding-left: 0.3rem;
+}
+
+.nav_lists .nav-link.active,
+.nav_lists .nav-link:hover{
+  color: white!important;
+  font-size: 0.9rem;
+}
+
+/*   home_slider  */
+
+.carousel-item{
+  height: 100vh;
+  position: relative;
+}
+
+.carousel-item .home_text{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  text-align: left;
+  margin-left: 1rem;
+}
+.carousel-item .home_text .btn{
+  border-width: 0.2rem;  
+  font-weight: bolder;
+  background-color: rgba(0,0,0,0.6)!important;
+  
+}
+.carousel-item .home_text p{
+  font-size: 1.3rem;
+}
+
+/*---Footer---*/
+.footer_body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #111;
+  height: auto;
+  width: 100vw;
+  color: white;
+
+}
+.footer_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+
+.social_med{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.social_med li{
+  margin:0 1rem 0 1rem  ;
+
+}
+.social_med a {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.social_med a:hover{
+  color: aqua;
+}
+
+
