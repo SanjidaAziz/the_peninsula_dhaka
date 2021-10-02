@@ -38,11 +38,11 @@ function current_user_info(){
 			<?php include 'includes/navbar.php'; ?>		
 		</header>
 		<?php if(isset($_SESSION['msg'])) { ?>
-            <div id="message_alert" style="z-index: 2000; position: fixed; top: 0; right: 0; margin-right: 20px; margin-top: 20px;" class="alert alert-danger">
+            <div id="message_alert" style="z-index: 2000; position: fixed; top: 0; right: 0; margin-right: 20px; margin-top: 20px;" class="alert alert-success">
                 <?php
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
-                ?>
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                 ?>
             </div>
         <?php } ?>
 
@@ -53,7 +53,7 @@ function current_user_info(){
 				<div class="col-sm-12 col-md-8 col-lg-6 ">
 					
 					<form action="edit_profile_process.php" method="POST" class="edit_profile">
-						<h3 class="mb-3 text-center ">Edit profile</h3>
+						<h3 class="mb-5 text-center ">Edit profile</h3>
 						<div class="mb-3">
 					    	<label for="exampleInputEmail1" class="form-label">User name</label>
 					    	<input type="text" name="username" value="<?php echo $current_user['user_name'] ?>" class="form-control" required >
@@ -97,5 +97,10 @@ function current_user_info(){
 		</footer>
 		<!-- scripts -->
 		<?php include 'includes/scripts.php'; ?>  
+		<script>
+            $(document).ready(function() {
+                $('#message_alert').fadeOut(6000);
+            });
+        </script>
 	</body>
 </html>

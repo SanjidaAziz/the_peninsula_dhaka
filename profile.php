@@ -38,56 +38,54 @@ function current_user_info(){
 		</header>
 
 		<?php if(isset($_SESSION['msg'])) { ?>
-            <div id="message_alert" style="z-index: 2000; position: fixed; top: 0; right: 0; margin-right: 20px; margin-top: 20px;" class="alert alert-danger">
+            <div id="message_alert" style="z-index: 2000; position: fixed; top: 0; right: 0; margin-right: 20px; margin-top: 20px;" class="alert alert-success">
                 <?php
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
-                ?>
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                 ?>
             </div>
         <?php } ?>
 
 		<?php $current_user= current_user_info() ?>
 
-		<div class="container p-0 py-5 ">
-			<div class="row justify-content-center pt-5 ">
+		<div class="container p-0  user_profile_background_img">
+			<div class="row justify-content-center ">
 
-				<div class="col-sm-12 col-md-8 col-lg-6 pt-5">
+				<div class="col-sm-12 col-md-10 col-lg-8 p-0 ">
 					
-
-					<div class="container-fluid user_profile">
-						<h3 class="mb-5 text-center ">User Profile</h3>
+					<div class="container-fluid user_profile p-5 ">
+						<h2 class="mb-5 text-center ">User Profile</h2>
 						<div class=" row justify-content-center">
-						
-						
-							<div class="col-4 border-dark border">
-								<img src="..." class="rounded mx-auto d-block" alt="...">
+												
+							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-4 border-dark border ">
+								<img src="" class="rounded mx-auto d-block" alt="">
 							</div>
-							<div class="col-8 ps-5">
-								<div class="mb-3">
-							    	<h5>User name : </h5>
+							<div class="col-md-6 col-lg-8 ps-5">
+								<div class="mb-4">
+							    	<span class="label">User name :</span>
 							    	<span class="">
 							    		<?php echo $current_user['user_name'] ?>
 							    	</span>
 						    	
 						  		</div>
-							  	<div class="mb-3">
-							    	<h5>Email Address : </h5>
-							    	<p class="">
+							  	<div class="mb-4">
+							    	<span class="label">Email Address :</span>
+							    	<span>
 							    		<?php echo $current_user['user_email'] ?>
-							    	</p>
+							    	</span>
 							  	</div>
-							  	<div class="mb-3">
-							    	<h5>Phone Number : </h5>
-							    	<p class="">
+							  	<div class="mb-4">
+							    	<span class="label">Phone Number :</span>
+							    	<span class="">
 							    		<?php echo $current_user['user_phone'] ?>
-							    	</p>
+							    	</span>
 							    	
 							  	</div>
-							  	<div class="mb-3">
-								    <h5>Joined Us : </h5>
-							    	<p class="">
+							  	<div class="mb-4">
+								    <span class="label">Joined Us :</span>
+							    	<span class="">
 							    		<?php echo $current_user['created_date'] ?>
-							    	</p>
+							    	</span>
 							  	</div>
 
 							  	<div>
@@ -113,5 +111,12 @@ function current_user_info(){
 		</footer>
 		<!-- scripts -->
 		<?php include 'includes/scripts.php'; ?>  
+
+		<script>
+            $(document).ready(function() {
+                $('#message_alert').fadeOut(6000);
+            });
+        </script>
+
 	</body>
 </html>

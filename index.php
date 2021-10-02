@@ -99,7 +99,7 @@
 		<?php include 'includes/scripts.php'; ?>
         <script>
             $(document).ready(function() {
-                $('#message_alert').fadeOut(8000);
+                $('#message_alert').fadeOut(6000);
             });
         </script>
 	</body>

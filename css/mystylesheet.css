@@ -114,16 +114,6 @@ background-color: #e8e3e5;
   background: #42070e !important;
   color: white;
 }
-/**---- login page --*
-.backgound_img{
-  position: relative;
-  height: 100vh;
-}
-.backgound_img .login_form{
-  position: absolute;
-  top: 30%;
-  align-self: center;
-}*/
 
 /*----- Login page -----*/
 
@@ -178,11 +168,29 @@ background-color: #e8e3e5;
 /**---------- Profile ---------*/
 .user_profile{
   color: white;
-  background: rgba(66, 7, 14,0.6)!impotant;
+  background: rgba(66, 7, 14,0.6)!important;
+  /*background: rgba(156, 146, 146,0.6)!important;*/ 
   background:transparent;
   border: 0px;
   padding:40px 20px 20px 20px;
   box-shadow: 3px 3px 4px #42070e;
+  margin-top: 104px!important;
+  padding-bottom: 70px!important;
+
+  margin-top: 204px!important;
+  margin-bottom: 100px!important;
+}
+
+.user_profile h2{
+  text-shadow: 2px 2px 4px maroon;
+}
+.user_profile .label,.user_profile a{
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 4px maroon;
+    
+}
+.user_profile span{
+  font-size: 1.1rem;  
 }
 
 .edit_profile{
@@ -217,6 +225,78 @@ background-color: #e8e3e5;
  
   text-shadow: 2px 2px 4px maroon;
 }
+
+
+/**-----services---*/
+.schedule{
+  margin-top: -150px!important;
+  padding-bottom: 150px;
+ 
+}
+.checkin, .checkout, .type{
+  background: rgb(66, 7, 14)!important;
+  color: white;
+  font-size: 1.1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-color: white;
+  border-radius: 20px!important;
+
+}
+.schedule .checkin p, .checkout p, .type p{
+  margin: 0px;
+  margin-bottom: 3px;
+}
+
+.schedule .blk-day{
+  width: 26%;
+  padding-right: 0px;  
+  box-sizing: border-box;
+  
+}
+.schedule .blk-month{
+  width: 44%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.schedule .blk-year{
+  width: 30%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.schedule .blk-type{
+ 
+  padding-right: 0px;
+  box-sizing: border-box;
+  width: 70%;
+}
+.schedule .blk-book{
+  
+  padding: 0px;
+  box-sizing: border-box;
+  width: 60%;
+  padding: 0px;
+  width: 30%;
+  text-align: right;
+  padding-right: 15px;
+}
+.schedule .btn-book{
+  background: rgb(66, 7, 14);
+  border-color: white;
+  border-width: 0.1rem;
+  color: white;
+}
+.schedule .btn-book:hover{
+  background: white;
+  border-width: 0.1rem;
+  color: rgb(66, 7, 14);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+
+
+
 
 
 

@@ -28,13 +28,13 @@
 						<h3 class="mb-3 text-center ">Register</h3>
 						<div class="mb-3">
 					    	<label for="exampleInputEmail1" class="form-label">User name</label>
-					    	<input type="text" name="username" value="" class="form-control" id="exampleInputUserName1" required>
+					    	<input type="text" name="username" value="" class="form-control" placeholder="Enter your name" required>
 					    	
 					  	</div>
 					  	<div class="mb-3">
 					    	<label for="exampleInputEmail1" class="form-label">Email address</label>
-					    	<input type="email" name="useremail" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-					    	<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+					    	<input type="email" name="useremail" value="" class="form-control" placeholder="Enter your email address" required>
+					    	
 					  	</div>
 					  	<div class="mb-3">
 					    	<label for="exampleInputEmail1" class="form-label">Phone number</label>
@@ -43,12 +43,15 @@
 					  	</div>
 					  	<div class="mb-3">
 						    <label for="exampleInputPassword1" class="form-label">Password</label>
-						    <input type="password" name="password" value="" class="form-control" id="exampleInputPassword1" required>
+						    <input type="password" name="password" value="" class="form-control" placeholder="Enter password here" required>
 					  	</div>
+					<!--
 					 	<div class="mb-3 form-check">
 						    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 						    <label class="form-check-label" for="exampleCheck1">Remember password</label>
 						</div>
+					-->
+
 					  	<button type="submit" class="btn">Submit</button>
 					  	<div class="my-3 message">
 						    Already have an account?<a href="login.php" class="fs-5"> Login</a>
@@ -66,7 +69,11 @@
 		</footer>
 		<!-- scripts -->
 		<?php include 'includes/scripts.php'; ?> 
-
+		<script>
+            $(document).ready(function() {
+                $('#message_alert').fadeOut(6000);
+            });
+        </script>
 
 		
 
