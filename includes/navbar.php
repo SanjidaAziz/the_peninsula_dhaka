@@ -1,5 +1,5 @@
 	
-<nav class="navbar_mystyle navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar_mystyle navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container p-0 ">
 		<a class="nav_logo navbar-brand p-0 m-0" href="index.php">
 			<div class="row">
@@ -22,7 +22,7 @@
 				<li class="nav-item "><a class="nav-link <?php if($page=='about'){echo 'active';} ?>" href="about.php">About</a></li>
 				<li class="nav-item "><a class="nav-link <?php if($page=='contact'){echo 'active';} ?>" href="contact.php">Contact</a></li>
 				<li class="nav-item "><a class="nav-link <?php if($page=='team'){echo 'active';} ?>" href="team.php">Team</a></li>
-				<li class="nav-item "><a class="nav-link <?php if($page=='login'){echo 'active';} ?>" href="team.php">Login</a></li>
+				<li class="nav-item "><a class="nav-link <?php if($page=='login'){echo 'active';} ?>" href="login.php">Login</a></li>
 			
 			</ul>
 		</div>

@@ -1,26 +1,101 @@
+<?php
+
+$fileName = "upload/data.csv";
+
+$file_handle = fopen($fileName, 'r');
+while (!feof($file_handle)) {
+    $data[] = fgetcsv($file_handle, 1024);
+}
+fclose($file_handle);
+
+if (!empty($_POST)) {
+    $new_csv = fopen($fileName, 'a');
+    $list = array(
+        0 => sizeof($data),
+        1 => $_POST['username'],
+        2 => $_POST['useremail'],
+        3 => $_POST['userphone'],
+        4 => $_POST['usermsg']
+    );
+    fputcsv($new_csv, $list);
+    fclose($new_csv);
+
+    $data = NULL;
+    $msg = "Data Added Successfully";
+    $file_handle = fopen($fileName, 'r');
+    while (!feof($file_handle)) {
+        $data[] = fgetcsv($file_handle, 1024);
+    }
+    fclose($file_handle);
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<?php $page='contact'; include 'includes/head.php'; ?>
+
 	</head>
 	<body>
 		<header>
 			<?php include 'includes/navbar.php'; ?>		
 		</header>
-		<main>
 
-			<div class="container text-center mt-5 py-5">
-				<h1 class="py-4">This is contact page</h1>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+		<div class="container my-5 py-5">
+			<div class="row mx-5 p-sm-0 p-0 pt-5 justify-content-center ">
+				<div class="col-xs-12 col-sm-8 col-md-8 shadow-lg border-0 rounded p-4  text-white text-center contact_form_banner">
+				<h1>Contact Us</h1>
+				</div>
 			</div>
-		</main>
+			<div class="row  mx-5 fw-bold p-0 justify-content-center">
+				<div class="col-xs-12 col-sm-8 col-md-8 bg-light shadow-lg border-0 rounded p-5 pb-1 mb-0">
 
-		
+					<form action="" method="POST" >
+						
+						<div class=" mb-3">
+							<label class="form-label">Name<span>*</span></label>
+							<input type="text" name="username" value="" class="form-control" placeholder="Enter your name" required>
+						</div>
+						<div class="mb-3">
+							<label class="form-label">Email address<span>*</span></label>
+							<input type="email" name="useremail" value="" class="form-control" placeholder="Enter your email address" aria-describedby="emailHelp" required>
+						</div>
+						<div class=" mb-3">
+							<label class="form-label">Phone<span>*</span></label>
+							<input type="tel" name="userphone" value="" class="form-control" placeholder="Enter your phpne number" required>
+						</div>
+						<div class=" mb-3">
+							<label class="form-label">Message<span>*</span></label>
+							<textarea name="usermsg" class="form-control" rows="3" required></textarea>
+						</div>
+						<div class="row justify-content-end p-0 m-0">
+							
+							<div class="col-1 p-0 m-4">
+								<a class="btn btn-link text-right ps-0 " role="button">
+							  <button class=" btn btn-outline-dark fw-bold contact_form_btn" href="abt.php">Submit</button></a>
+							</div>
+							
+						</div>
+						<div class="border-0  p-2 text-center">
+							<?php
+							if (isset($msg)) {
+								echo $msg;
+							} 
+							?>
+						</div>
+						<div class=" justify-content-end pb-3">							
+							
+							  <a class="btn btn-link  ps-0 " href="index.php" role="button">Back to Home</a>
+													
+						</div>						
+					</form>					
+				</div>								
+			</div>			
+		</div>
+		<footer>
 			<?php include 'includes/footer.php'; ?>	
-		
+		</footer>
 		<!-- scripts -->
 		<?php include 'includes/scripts.php'; ?>  
 	</body>

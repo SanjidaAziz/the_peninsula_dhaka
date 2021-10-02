@@ -97,4 +97,77 @@ background-color: #e8e3e5;
   color: aqua;
 }
 
+/**-----Contact page----*/
+.contact_form_banner{
+   background: #42070e !important;
+}
+.form-label span{
+  color: red;
+}
+.contact_form_btn{
+  border-color: #42070e !important;
+  border-width: 2px;
+  color: #42070e;
+}
+.contact_form_btn:hover{
+  background: #42070e !important;
+  color: white;
+}
+/**---- login page --*
+.backgound_img{
+  position: relative;
+  height: 100vh;
+}
+.backgound_img .login_form{
+  position: absolute;
+  top: 30%;
+  align-self: center;
+}*/
 
+.login_backgound_img{
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+
+  background: url('../images/lobby.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.login_form{
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0px;
+  padding:40px 20px 20px 20px;
+  box-shadow: 3px 3px 4px #42070e;
+  margin: 20px;
+}
+.login_form h3{
+  text-shadow: 2px 2px 4px red;
+}
+
+.login_form .form-control{
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  background:transparent;
+  color: white;
+}
+.login_form button{
+  border-color: white;
+  border-width: 2px;
+  color: white;
+  margin-top: 20px;
+
+}
+.login_form button:hover{
+  background: #42070e;
+  color: white;
+}
