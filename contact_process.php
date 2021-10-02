@@ -7,7 +7,7 @@ require_once ('functions.php');
         $userphone= $_POST['userphone'];
         $usermsg= $_POST['usermsg'];
         
-        date_default_timezone_get('Asia/Dhaka');
+        date_default_timezone_set('Asia/Dhaka');
         $currentTime= date('Y-m-d H:i:s');
         $msg = "";
 

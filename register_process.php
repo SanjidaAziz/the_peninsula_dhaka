@@ -11,7 +11,7 @@ if(isset($_POST['useremail'])) {
         $phone= $_POST['userphone'];
         $password= md5($_POST['password']);
         $status=1;
-        date_default_timezone_get('Asia/Dhaka');
+        date_default_timezone_set('Asia/Dhaka');
         $currentTime= date('Y-m-d H:i:s');
         $msg = "";
         if(!empty($username) && !empty($useremail) && !empty($phone) && !empty($password) && !is_numeric($username)){

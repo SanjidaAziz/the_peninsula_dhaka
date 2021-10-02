@@ -41,7 +41,7 @@
         
         $msg = "";
         if(!empty($username) && !empty($useremail) && !empty($phone) && !empty($password) && !empty($new_password) && !is_numeric($username) ){
-            $sqlUpdate= "UPDATE user SET user_name = '$username', user_email = '$useremail', user_phone = '$phone',user_password = '$new_password' WHERE user_id = $current_userid";  
+            $sqlUpdate= "UPDATE user SET user_name = '$username', user_email = '$useremail', user_phone = '$phone',user_password = '$new_password' WHERE user_id = '$current_userid'";  
             $resultUpdate= mysqli_query($link,$sqlUpdate);
             
             
@@ -56,7 +56,7 @@
                              user_email = '$useremail',
                              user_phone = '$phone',
                              user_password = '$password'
-                        WHERE user_id = $current_userid";  
+                        WHERE user_id = '$current_userid'";  
             $resultUpdate= mysqli_query($link,$sqlUpdate);
             $noOfRow = mysqli_num_rows($resultUpdate);
             //if($noOfRow){

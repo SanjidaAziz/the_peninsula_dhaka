@@ -8,6 +8,7 @@
 			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 			<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 			<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+			<li><a href="#"><i class="fa fa-map-marker"></i></a></li>
 		</ul>
 		<p class="">Call Us - 01234567891 , 2441139</p>
 		<p class="py-1"><small>&copy; Copyright 2021, all the copyright reserves to The Peninsula</small></p>		
