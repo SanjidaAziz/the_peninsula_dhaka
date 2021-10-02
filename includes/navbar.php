@@ -22,8 +22,22 @@
 				<li class="nav-item "><a class="nav-link <?php if($page=='about'){echo 'active';} ?>" href="about.php">About</a></li>
 				<li class="nav-item "><a class="nav-link <?php if($page=='contact'){echo 'active';} ?>" href="contact.php">Contact</a></li>
 				<li class="nav-item "><a class="nav-link <?php if($page=='team'){echo 'active';} ?>" href="team.php">Team</a></li>
+
+                <?php
+                    require('functions.php');
+                    if(is_logged_in()) {
+                ?>
+
+				<li class="nav-item "><a class="nav-link <?php if($page=='login'){echo 'active';} ?>" href="logout.php">Logout</a></li>
+				<li class="nav-item pt-1">
+					<a class="nav-link rounded-circle profile_image py-0 <?php if($page=='profile'){echo 'active';} ?>" href="profile.php" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+						<i class="fa fa-user-circle fa-2x"></i>
+					</a>
+				</li>
+                <?php } else { ?>
 				<li class="nav-item "><a class="nav-link <?php if($page=='login'){echo 'active';} ?>" href="login.php">Login</a></li>
-			
+                <?php } ?>
+
 			</ul>
 		</div>
 	</div> 

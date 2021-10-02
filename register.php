@@ -8,7 +8,15 @@
 		<header>
 			<?php include 'includes/navbar.php'; ?>		
 		</header>
-	
+		
+		<?php if(isset($_SESSION['msg'])) { ?>
+            <div id="message_alert" style="z-index: 2000; position: fixed; top: 0; right: 0; margin-right: 20px; margin-top: 20px;" class="alert alert-danger">
+                <?php
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+                ?>
+            </div>
+        <?php } ?>
 		
 		<div class="container-fluid login_backgound_img p-0">
 			<!--<div ><img src="images/dine.jpg" class="d-block w-100" alt="..."></div> -->
@@ -16,21 +24,26 @@
 
 				<div class="col-sm-8 col-md-6 col-lg-4  login_form ">
 					
-					<form action="" method="POST" class="registerForm">
+					<form action="register_process.php" method="POST" class="registerForm">
 						<h3 class="mb-3 text-center ">Register</h3>
 						<div class="mb-3">
 					    	<label for="exampleInputEmail1" class="form-label">User name</label>
-					    	<input type="email" name="login_username" value="" class="form-control" id="exampleInputUserName1">
+					    	<input type="text" name="username" value="" class="form-control" id="exampleInputUserName1" required>
 					    	
 					  	</div>
 					  	<div class="mb-3">
 					    	<label for="exampleInputEmail1" class="form-label">Email address</label>
-					    	<input type="email" name="login_useremail" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					    	<input type="email" name="useremail" value="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 					    	<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 					  	</div>
 					  	<div class="mb-3">
+					    	<label for="exampleInputEmail1" class="form-label">Phone number</label>
+					    	<input type="tel" name="userphone" value="" class="form-control" placeholder="Enter phpne number" required>
+					    	
+					  	</div>
+					  	<div class="mb-3">
 						    <label for="exampleInputPassword1" class="form-label">Password</label>
-						    <input type="password" name="login_password" value="" class="form-control" id="exampleInputPassword1">
+						    <input type="password" name="password" value="" class="form-control" id="exampleInputPassword1" required>
 					  	</div>
 					 	<div class="mb-3 form-check">
 						    <input type="checkbox" class="form-check-input" id="exampleCheck1">

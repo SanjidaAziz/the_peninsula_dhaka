@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -9,6 +8,14 @@
 			<?php include 'includes/navbar.php'; ?>		
 		</header>
 
+        <?php if(isset($_SESSION['msg'])) { ?>
+            <div id="message_alert" style="z-index: 2000; position: fixed; top: 0; right: 0; margin-right: 20px; margin-top: 20px;" class="alert alert-success">
+                <?php
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                 ?>
+            </div>
+        <?php } ?>
 		<main>
 			<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 			  	<div class="carousel-indicators">
@@ -89,6 +96,11 @@
 
 
 		<!-- scripts -->
-		<?php include 'includes/scripts.php'; ?> 
+		<?php include 'includes/scripts.php'; ?>
+        <script>
+            $(document).ready(function() {
+                $('#message_alert').fadeOut(8000);
+            });
+        </script>
 	</body>
 </html>

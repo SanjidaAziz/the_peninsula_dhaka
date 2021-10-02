@@ -25,6 +25,7 @@ background-color: #e8e3e5;
 }
 .nav_lists li{
   padding-left: 0.3rem;
+  align-self: center;
 }
 
 .nav_lists .nav-link.active,
@@ -124,6 +125,8 @@ background-color: #e8e3e5;
   align-self: center;
 }*/
 
+/*----- Login page -----*/
+
 .login_backgound_img{
   margin: 0px;
   padding: 0px;
@@ -171,3 +174,49 @@ background-color: #e8e3e5;
   background: #42070e;
   color: white;
 }
+
+/**---------- Profile ---------*/
+.user_profile{
+  color: white;
+  background: rgba(66, 7, 14,0.6)!impotant;
+  background:transparent;
+  border: 0px;
+  padding:40px 20px 20px 20px;
+  box-shadow: 3px 3px 4px #42070e;
+}
+
+.edit_profile{
+  background: rgba(66, 7, 14,0.6)!important;
+  background:transparent;
+  border: 0px;
+  padding:40px 20px 20px 20px;
+  box-shadow: 3px 3px 4px #42070e;
+}
+.edit_profile .form-control{  
+  background:transparent;
+  color: white;
+}
+
+.edit_profile button{
+  border-color: white;
+  border-width: 2px;
+  color: white;
+  background:transparent;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px maroon;
+}
+.edit_profile button:hover{
+  background: #42070e;
+  color: white;
+  
+}
+.edit_profile h3{
+  text-shadow: 2px 2px 4px maroon;
+}
+.edit_profile .form-label{
+ 
+  text-shadow: 2px 2px 4px maroon;
+}
+
+
+
