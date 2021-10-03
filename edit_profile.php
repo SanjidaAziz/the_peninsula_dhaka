@@ -52,31 +52,35 @@ function current_user_info(){
 			<div class="row justify-content-center p-5">
 				<div class="col-sm-12 col-md-8 col-lg-6 ">
 					
-					<form action="edit_profile_process.php" method="POST" class="edit_profile">
+					<form action="edit_profile_process.php" method="POST" class="edit_profile" enctype="multipart/form-data">
 						<h3 class="mb-5 text-center ">Edit profile</h3>
 						<div class="mb-3">
-					    	<label for="exampleInputEmail1" class="form-label">User name</label>
-					    	<input type="text" name="username" value="<?php echo $current_user['user_name'] ?>" class="form-control" required >
+					    	<label for="username" class="form-label">User name</label>
+					    	<input id="username" type="text" name="username" value="<?php echo $current_user['user_name'] ?>" class="form-control" required >
 					    	
 					  	</div>
 					  	<div class="mb-3">
-					    	<label for="exampleInputEmail1" class="form-label">Email address</label>
-					    	<input type="email" name="useremail" value="<?php echo $current_user['user_email'] ?>" class="form-control"required>
+					    	<label for="useremail" class="form-label">Email address</label>
+					    	<input id="useremail" type="email" name="useremail" value="<?php echo $current_user['user_email'] ?>" class="form-control"required>
 					    
 					  	</div>
 					  	<div class="mb-3">
-					    	<label for="exampleInputEmail1" class="form-label">Phone number</label>
-					    	<input type="tel" name="userphone" value="<?php echo $current_user['user_phone'] ?>" class="form-control" required>
+					    	<label for="userphone" class="form-label">Phone number</label>
+					    	<input id="userphone" type="tel" name="userphone" value="<?php echo $current_user['user_phone'] ?>" class="form-control" required>
 					    	
-					  	</div>
+					  	</div><!--
 					  	<div class="mb-3">
-						    <label for="exampleInputPassword1" class="form-label">Previous Password*</label>
-						    <input type="password" name="password" value="" class="form-control" required>
-					  	</div>
+						    <label for="password" class="form-label">Previous Password*</label>
+						    <input id="password" type="password" name="password" value="" class="form-control" required>
+					  	</div> -->
 					  	<div class="mb-3">
-						    <label for="exampleInputPassword1" class="form-label">New Password</label>
-						    <input type="password" name="new_password" value="" class="form-control">
+						    <label for="new_password" class="form-label">New Password</label>
+						    <input id="new_password" type="password" name="new_password" value="" class="form-control">
 					  	</div>
+                        <div class="mb-3">
+                            <label for="user_photo" class="form-label">Change Profile Photo</label>
+                            <input id="user_photo" type="file" name="user_photo" value="" class="form-control">
+                        </div>
 					 	<div class="float-end">
 					  		<button type="submit">Update</button>
 					  	</div>

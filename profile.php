@@ -3,6 +3,7 @@ function current_user_info(){
 	require_once ('db/connection.php');
 	if(is_logged_in()){
 		$email= $_SESSION['user_email'];
+
 		$sqlSelect = "SELECT * FROM user where user_email='$email'";
 		$result = mysqli_query($link,$sqlSelect);
 		$noOfRow = mysqli_num_rows($result);
@@ -11,10 +12,6 @@ function current_user_info(){
 			//printer($row,1);
 			return $row;
 		}
-
-
-		//echo "hiii";
-		//exit();
 	}
 	else{
 		$msg= "no user logged in";
@@ -46,7 +43,10 @@ function current_user_info(){
             </div>
         <?php } ?>
 
-		<?php $current_user= current_user_info() ?>
+		<?php
+            $current_user= current_user_info();
+            $profile_photo = ($current_user['user_photo'] == NULL) ? 'images/fallback-profile-photo.jpg' : 'upload/'.$current_user['user_photo'];
+        ?>
 
 		<div class="container p-0  user_profile_background_img">
 			<div class="row justify-content-center ">
@@ -57,8 +57,8 @@ function current_user_info(){
 						<h2 class="mb-5 text-center ">User Profile</h2>
 						<div class=" row justify-content-center">
 												
-							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-4 border-dark border ">
-								<img src="" class="rounded mx-auto d-block" alt="">
+							<div class="col-xs-8 col-sm-8 col-md-6 col-lg-4 profile-photo" style="background-image: url('<?php echo $profile_photo; ?>');">
+							
 							</div>
 							<div class="col-md-6 col-lg-8 ps-5">
 								<div class="mb-4">
@@ -84,7 +84,7 @@ function current_user_info(){
 							  	<div class="mb-4">
 								    <span class="label">Joined Us :</span>
 							    	<span class="">
-							    		<?php echo $current_user['created_date'] ?>
+							    		<?php echo date('M d, Y, h:i a', strtotime($current_user['created_date'])) ?>
 							    	</span>
 							  	</div>
 

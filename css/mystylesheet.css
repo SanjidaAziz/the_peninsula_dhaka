@@ -1,9 +1,7 @@
 body{
 overflow-x: hidden;
 color: #000000;
-background-color: #b5acad;
-background-color: #adaaab;
-background-color: #cfcccd;
+box-sizing: border-box;
 background-color: #e8e3e5;
 }
 
@@ -12,8 +10,6 @@ background-color: #e8e3e5;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.1rem;
- 
- // background: rgba(107, 3, 17,0.6)!important; 
   background: rgba(66, 7, 14,0.6)!important;
   
   font-size: 0.8rem;
@@ -36,8 +32,7 @@ background-color: #e8e3e5;
 
 /*   home_slider  */
 
-.carousel-item{
-  height: 100vh;
+.carousel-item{ 
   position: relative;
 }
 
@@ -100,7 +95,12 @@ background-color: #e8e3e5;
 
 /**-----Contact page----*/
 .contact_form_banner{
-   background: #42070e !important;
+   background: #472328 !important;
+}
+.contact-form{
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .form-label span{
   color: red;
@@ -108,10 +108,10 @@ background-color: #e8e3e5;
 .contact_form_btn{
   border-color: #42070e !important;
   border-width: 2px;
-  color: #42070e;
+  color: #472328;
 }
 .contact_form_btn:hover{
-  background: #42070e !important;
+  background: #472328 !important;
   color: white;
 }
 
@@ -168,7 +168,7 @@ background-color: #e8e3e5;
 /**---------- Profile ---------*/
 .user_profile{
   color: white;
-  background: rgba(66, 7, 14,0.6)!important;
+  background: #472328!important;
   /*background: rgba(156, 146, 146,0.6)!important;*/ 
   background:transparent;
   border: 0px;
@@ -182,19 +182,25 @@ background-color: #e8e3e5;
 }
 
 .user_profile h2{
-  text-shadow: 2px 2px 4px maroon;
+  text-shadow: 1px 1px 4px white;
 }
 .user_profile .label,.user_profile a{
   font-size: 1.3rem;
-  text-shadow: 2px 2px 4px maroon;
+  text-shadow: 1px 1px 4px white;
     
 }
 .user_profile span{
   font-size: 1.1rem;  
 }
+.profile-photo{
+  min-height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
+}
 .edit_profile{
-  background: rgba(66, 7, 14,0.6)!important;
+  background: #472328!important;
   background:transparent;
   border: 0px;
   padding:40px 20px 20px 20px;
@@ -211,7 +217,7 @@ background-color: #e8e3e5;
   color: white;
   background:transparent;
   margin-top: 20px;
-  text-shadow: 2px 2px 4px maroon;
+  text-shadow: 1px 1px 4px white;
 }
 .edit_profile button:hover{
   background: #42070e;
@@ -219,89 +225,73 @@ background-color: #e8e3e5;
   
 }
 .edit_profile h3{
-  text-shadow: 2px 2px 4px maroon;
+  text-shadow: 1px 1px 4px white;
 }
 .edit_profile .form-label{
  
-  text-shadow: 2px 2px 4px maroon;
+  text-shadow: 1px 1px 4px white;
 }
 
 
 /**-----booking---*/
 .booking-img{
   position: relative;
+
 }
 .booking-form{
   position: absolute;
   top: 80%;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
   background: transparent;
+  box-sizing: border-box;
 }
 
 .checkin, .checkout, .type{
   background: rgb(66, 7, 14)!important;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   border-color: white;
   border-radius: 20px!important;
 
 }
 .schedule .checkin p, .checkout p, .type p{
   margin: 0px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
-.schedule .blk-day{
-  width: 26%;
-  padding-right: 0px;  
-  box-sizing: border-box;
-  
-}
-.schedule .blk-month{
-  width: 44%;
-  padding: 0px;
-  box-sizing: border-box;
-}
-.schedule .blk-year{
-  width: 30%;
-  padding: 0px;
-  box-sizing: border-box;
-}
-.schedule .blk-type{
- 
-  padding-right: 0px;
-  box-sizing: border-box;
-  width: 70%;
-}
-.schedule .blk-book{
-  
-  padding: 0px;
-  box-sizing: border-box;
-  width: 60%;
-  padding: 0px;
-  width: 30%;
-  text-align: right;
-  padding-right: 15px;
+.booking{
+  padding-left: 0px;
+  align-self: center;
 }
 .schedule .btn-book{
   background: rgb(66, 7, 14);
   border-color: white;
   border-width: 0.1rem;
   color: white;
+  font-weight: bold;
 }
 .schedule .btn-book:hover{
   background: white;
   border-width: 0.1rem;
   color: rgb(66, 7, 14);
-  
+  font-size: 1.1rem;
+  border-color:rgb(66, 7, 14);
+  font-weight: bold;  
+}
+
+.booking_confirmation_form{
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 /*-----------services------------*/
 .services h2{
   color: rgb(66, 7, 14);
+  text-shadow: 2px 2px 4px maroon;
   font-weight: bold;
 }
 .service_blocks{
@@ -333,20 +323,30 @@ background-color: #e8e3e5;
   border-radius: 20px;
 }
 
-/*---------gallery----------*/
+/*---------Services room section----------*/
 
-.catagory-section{
+.room-section{
   background: #d9cacb;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
-.catagory-section .card-blk{
-
- padding-bottom: 20px;
- display: flex;
-
+.room-section h2{
+  text-align: center;
+  text-shadow: 2px 2px 4px maroon;
+  color: rgb(66, 7, 14);
 }
-.card-blk .card-partion{
- display: flex;
+.room-section .card-blk{
+ padding: 20px; 
+}
+.card-blk .card {
+  overflow: hidden;
+  background: #e8e3e5!important;
+}
+.card-blk .card-partition {
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .card-blk .card-text{
   font-weight: bold;
@@ -355,6 +355,7 @@ background-color: #e8e3e5;
 }
 .card-blk .card-title{  
   font-size: 1.4rem;
+  color: rgb(66, 7, 14);
   text-shadow: 2px 2px 4px maroon;
   padding-bottom:15px;
 }
@@ -362,21 +363,155 @@ background-color: #e8e3e5;
   font-weight: normal;
   font-size: 0.9rem;
 }
-.catagory-section .card_img{
-  
-  height: inherit;  
-}
 
 /*----------about us-------*/
-.about-background {
-  height: 100vh;
- /* background-color: #cccccc;*/
-  opacity: 80%;
-  background-repeat: no-repeat,
+
+
+.about-section{
+  margin-top: 150px;
+  margin-bottom: 80px;
+
+}
+.about-section h1{
+  color: rgb(66, 7, 14);
+  text-shadow: 2px 2px 4px black;
 }
 
+.about-section .about-background  { 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+
+}
+
+.about-text{
+ padding: 20px;
+ margin: 30px;
+ background: #472328;
+ color: white;
+
+}
+.about-text h3{
+  text-shadow: 2px 2px 4px white;
+
+}
+
+/**---------details page---------*/
+.category-section{
+  margin-top: 50px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.room-category .nav-link.active,
+.room-category .nav-link:hover{
+  font-weight: bold!important;
+}
+
+.details .carousel-item img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;  
+  }
 
 
+
+
+
+
+
+
+
+/*-------responsive-----*/
+@media screen and (max-width: 600px){
+  .nav_logo img{
+    height: 4rem;
+  }
+  .booking-img .background-image{
+    height: 600px;
+  }
+  .home-slider .carousel-item img{
+   height: 650px;  
+  }
+  .details .carousel-item img{
+    
+    height: 400px;  
+  }
+  
+
+  .schedule .checkin , .checkout , .type , .booking{
+    width: 50%;
+    box-sizing: border-box;
+  }
+  .booking-form{
+    left: 50%;
+  }
+}
+@media screen and (min-width: 600px){
+   .nav_logo img{
+    height: 4.2rem;
+  }
+  .booking-img .background-image{
+    height: 600px;
+  }
+  .home-slider .carousel-item img{
+   height: 700px;  
+  }
+  #checkin , #checkout, #type {
+    padding: 0px;
+  }
+  .booking-form{
+    left: 55%;
+  }
+  .details .carousel-item img{
+    
+    height: 480px;  
+  }
+  
+
+}
+@media screen and (min-width: 768px){
+    .nav_logo img{
+    height: 5rem;
+    }
+  .booking-img .background-image{
+    height: 600px;
+  }
+  .home-slider .carousel-item img{
+   height: 500px;  
+  }
+  #checkin , #checkout, #type {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .details .carousel-item img{
+    
+    height: 600px;  
+  }
+  
+}
+
+@media screen and (min-width: 992px){
+   .nav_logo img{
+    height: 5.1rem;
+  }
+  .home-slider .carousel-item img{
+   height: 100vh;  
+  }
+ 
+}
+
+@media screen and (min-width: 1200px){
+  .nav_logo img{
+    height: 5.5rem;
+  }
+  .home-slider .carousel-item img{
+   height: 100vh;  
+  }
+  
+}
 
 
 

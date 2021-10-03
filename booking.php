@@ -2,19 +2,21 @@
 
 	if (!empty($_POST)){
 		require_once ('db/connection.php');
-		$checkin_day= $_POST['checkin_day'];
-        $checkin_month= $_POST['checkin_month'];
-        $checkin_year= $_POST['checkin_year'];
-        $checkin= "$checkin_year-$checkin_month-$checkin_day";
+		//$checkin_day= $_POST['checkin_day'];
+       // $checkin_month= $_POST['checkin_month'];
+        //$checkin_year= $_POST['checkin_year'];
+        //$checkin= "$checkin_year-$checkin_month-$checkin_day";
+        $checkin= $_POST['checkin'];
+        $checkout= $_POST['checkout'];
         //echo  $checkin ."hell o". $checkin;
         //echo "<br>";
         //print_r($checkin);
        // exit();
 
-        $checkout_day= $_POST['checkout_day'];
-        $checkout_month= $_POST['checkout_month'];
-        $checkout_year= $_POST['checkout_year'];
-        $checkout= "$checkout_year-$checkout_month-$checkout_day";
+        //$checkout_day= $_POST['checkout_day'];
+        //$checkout_month= $_POST['checkout_month'];
+        //$checkout_year= $_POST['checkout_year'];
+        //$checkout= "$checkout_year-$checkout_month-$checkout_day";
 
         $room_type= $_POST['room_type'];
        
@@ -43,17 +45,10 @@
 			<?php include 'includes/navbar.php'; ?>		
 		</header>
 
-		<?php if(isset($_SESSION['msg'])) { ?>
-            <div id="message_alert" style="z-index: 2000; position: fixed; top: 0; right: 0; margin-right: 20px; margin-top: 20px;" class="alert alert-danger">
-                <?php
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
-                ?>
-            </div>
-        <?php }  ?>
 
-		<div class="container my-5 py-5">
-			<div class="row mx-5 p-sm-0 p-0 pt-5 justify-content-center ">
+
+		<div class="container booking_confirmation_form">
+			<div class="row mx-5 p-sm-0 p-0 justify-content-center ">
 				<div class="col-xs-12 col-sm-10 col-md-10 col-lg-8 shadow-lg border-0 rounded p-4 mt-2  text-white text-center contact_form_banner">
 				<h1>Confirm Reservation</h1>
 				</div>
@@ -64,29 +59,29 @@
 					<form action="booking_process.php" method="POST" >
 						
 						<div class=" mb-3">
-							<label class="form-label">Full Name<span>*</span></label>
-							<input type="text" name="name" value="" class="form-control" placeholder="Enter your name" required>
+							<label for="name" class="form-label">Full Name<span>*</span></label>
+							<input for="name" type="text" name="name" value="" class="form-control" placeholder="Enter your name" required>
 						</div>
 						<div class="mb-3">
-							<label class="form-label">Email address<span>*</span></label>
-							<input type="email" name="email" value="" class="form-control" placeholder="Enter your email address" aria-describedby="emailHelp" required>
+							<label for="email" class="form-label">Email address<span>*</span></label>
+							<input for="email" type="email" name="email" value="" class="form-control" placeholder="Enter your email address" aria-describedby="emailHelp" required>
 						</div>
 						<div class=" mb-3">
-							<label class="form-label">Phone<span>*</span></label>
-							<input type="tel" name="phone" value="" class="form-control" placeholder="Enter your phpne number" required>
+							<label for="phone" class="form-label">Phone<span>*</span></label>
+							<input id="phone" type="tel" name="phone" value="" class="form-control" placeholder="Enter your phpne number" required>
 						</div>
 						
 						<div class="row">
 							<div class="col-6">
 								<div class=" mb-3">
-									<label class="form-label">Checkin<span>*</span></label>
-									<input type="text" name="checkin" value="<?php echo $checkin?>" class="form-control" required>
+									<label for="checkin" class="form-label">Checkin<span>*</span></label>
+									<input id="checkin" type="text" name="checkin" value="<?php echo $checkin ?>" class="form-control" required>
 								</div>
 							</div>
 							<div class="col-6">	
 								<div class=" mb-3">
-									<label class="form-label">Checkout<span>*</span></label>
-									<input type="text" name="checkout" value="<?php echo $checkout?>" class="form-control" required>
+									<label for="checkout" class="form-label">Checkout<span>*</span></label>
+									<input id="checkout" type="text" name="checkout" value="<?php echo $checkout?>" class="form-control" required>
 								</div>
 							</div>
 							
@@ -94,23 +89,23 @@
 						<div class="row">
 							<div class="col-6">
 								<div class=" mb-3">
-									<label class="form-label">Adults<span>*</span></label>
-									<input type="number" name="adult" value="" class="form-control" required>
+									<label for="adult" class="form-label">Adults<span>*</span></label>
+									<input id="adult" type="number" name="adult" value="" class="form-control" required>
 								</div>
 							</div>
 							<div class="col-6">	
 								<div class=" mb-3">
-									<label class="form-label">Children</label>
-									<input type="number" name="child" value="" class="form-control">
+									<label for="child" class="form-label">Children</label>
+									<input id="child" type="number" name="child" value="" class="form-control">
 								</div>
 							</div>							
 						</div>
 						<div class=" mb-3">
 							<div>
-								<label class="form-label">Room Type<span>*</span></label>
+								<label for="room_type" class="form-label">Room Type<span>*</span></label>
 							</div>
 							
-							<select class="form-select-sm" name="room_type" id="type" required>
+							<select id="room_type" class="form-select-sm" name="room_type" id="type" required>
 							    <option selected value="<?php echo $room_type?>"><?php echo $room_type?></option>
 							    <option value="Deluxe">Deluxe</option>
 							    <option value="Super Deluxe">Super Deluxe</option>

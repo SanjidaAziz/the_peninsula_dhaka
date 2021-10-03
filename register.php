@@ -19,7 +19,6 @@
         <?php } ?>
 		
 		<div class="container-fluid login_backgound_img p-0">
-			<!--<div ><img src="images/dine.jpg" class="d-block w-100" alt="..."></div> -->
 			<div class="row justify-content-center">
 
 				<div class="col-sm-8 col-md-6 col-lg-4  login_form ">
@@ -27,30 +26,24 @@
 					<form action="register_process.php" method="POST" class="registerForm">
 						<h3 class="mb-3 text-center ">Register</h3>
 						<div class="mb-3">
-					    	<label for="exampleInputEmail1" class="form-label">User name</label>
-					    	<input type="text" name="username" value="" class="form-control" placeholder="Enter your name" required>
+					    	<label for="name" class="form-label">User name</label>
+					    	<input id="name" type="text" name="username" value="" class="form-control" placeholder="Enter your name" required>
 					    	
 					  	</div>
 					  	<div class="mb-3">
-					    	<label for="exampleInputEmail1" class="form-label">Email address</label>
-					    	<input type="email" name="useremail" value="" class="form-control" placeholder="Enter your email address" required>
+					    	<label for="email" class="form-label">Email address</label>
+					    	<input id="email" type="email" name="useremail" value="" class="form-control" placeholder="Enter your email address" required>
 					    	
 					  	</div>
 					  	<div class="mb-3">
-					    	<label for="exampleInputEmail1" class="form-label">Phone number</label>
-					    	<input type="tel" name="userphone" value="" class="form-control" placeholder="Enter phpne number" required>
+					    	<label for="userphone" class="form-label">Phone number</label>
+					    	<input id="userphone" type="tel" name="userphone" value="" class="form-control" placeholder="Enter phpne number" required>
 					    	
 					  	</div>
 					  	<div class="mb-3">
-						    <label for="exampleInputPassword1" class="form-label">Password</label>
-						    <input type="password" name="password" value="" class="form-control" placeholder="Enter password here" required>
+						    <label for="password" class="form-label">Password</label>
+						    <input id="password" type="password" name="password" value="" class="form-control" placeholder="Enter password here" required>
 					  	</div>
-					<!--
-					 	<div class="mb-3 form-check">
-						    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						    <label class="form-check-label" for="exampleCheck1">Remember password</label>
-						</div>
-					-->
 
 					  	<button type="submit" class="btn">Submit</button>
 					  	<div class="my-3 message">
