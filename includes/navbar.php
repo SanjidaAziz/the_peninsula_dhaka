@@ -7,7 +7,7 @@
 					<img src="images/logo.png" alt="login inage">
 				</div>
 				<div class="col-9 pt-1">
-					<span><span class="fs-4 fw-bold">The Peninsula</span> <br><span class=" fw-light">Dhaka</span></span>
+					<span class="title"><span class="main-title">The Peninsula</span> <br><span class=" fw-light">Dhaka</span></span>
 				</div>
 			</div>
 			

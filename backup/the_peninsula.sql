@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2021 at 02:34 PM
+-- Generation Time: Oct 04, 2021 at 07:01 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -139,7 +139,7 @@ INSERT INTO `image` (`image_id`, `category_id`, `image_name`) VALUES
 (19, 21, 'pool4.jpg'),
 (20, 21, 'pool2.jpg'),
 (21, 21, 'pool3.jpg'),
-(22, 22, 'meeting.jpg'),
+(22, 22, 'meeting1.jpg'),
 (23, 22, 'meeting2.jpg'),
 (24, 23, 'food2.jpg'),
 (25, 23, 'dine.jpg'),
@@ -148,7 +148,10 @@ INSERT INTO `image` (`image_id`, `category_id`, `image_name`) VALUES
 (28, 23, 'food1.jpg'),
 (29, 23, 'food3.jpg'),
 (30, 24, 'spa1.jpg'),
-(31, 31, 'lobby.jpg');
+(31, 31, 'lobby.jpg'),
+(32, 31, 'lobby2.jpg'),
+(33, 24, 'spa2.jpg'),
+(34, 24, 'spa3.jpg');
 
 -- --------------------------------------------------------
 
@@ -195,7 +198,7 @@ CREATE TABLE `service` (
 
 INSERT INTO `service` (`service_id`, `service_name`, `service_details`, `service_photo`) VALUES
 (1, 'Rooms/Suites', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.', 'hotel.png'),
-(2, 'Food Dine', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.', 'dish.png'),
+(2, 'Food service', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.', 'dish.png'),
 (3, 'Swiming Pool', 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por', 'swimming-pool.png'),
 (4, 'Spa', 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of', 'spa.png'),
 (5, 'Meeting Room', 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of', 'meeting-room.png');
@@ -304,7 +307,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `room`

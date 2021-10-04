@@ -6,12 +6,20 @@ background-color: #e8e3e5;
 }
 
 /*   Navbar  */
+.title{
+ font-family: 'Source Serif Pro', serif;
+ font-style: italic;
+ font-weight: bold;
+}
+.main-title{
+ font-size: 1.4em;
+
+}
 .navbar_mystyle{
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.1rem;
-  background: rgba(66, 7, 14,0.6)!important;
-  
+  background: rgba(66, 7, 14,0.6)!important; 
   font-size: 0.8rem;
 }
 
@@ -420,9 +428,15 @@ transform: scale(1.1);
   padding-bottom: 80px;
 }
 
+.room-category .nav-link{
+  color: rgb(66, 7, 14);
+}
 .room-category .nav-link.active,
 .room-category .nav-link:hover{
-  font-weight: bold!important;
+  background: rgb(66, 7, 14);
+  color: white;
+  font-weight: bold; 
+  border-radius: 15px; 
 }
 
 .details .carousel-item img{
@@ -456,20 +470,26 @@ transform: scale(1.1);
  /*-------Gallery section---------*/ 
 .gallery .img-box{
 padding: 5px;
-
 }
 
 .gallery  img{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
-    height: 200px;
-    
+    height: 200px;   
 }
-.gallery  img:hover{
-    
+.gallery  img:hover{    
     transform: scale(1.1);
+}
+.room-category .nav-item{
+  color: rgb(66, 7, 14);
+}
+.room-category .nav-item.active,
+.room-category .nav-item:hover{
+  background: rgb(66, 7, 14);
+  color: white;
+  font-weight: bold; 
+  border-radius: 15px; 
 }
 
 

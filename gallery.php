@@ -50,20 +50,41 @@ else{
 				<div class="row justify-content-center">
 					<div class=" col-md-3 col-lg-2 p-0">
 						<p class="px-3 fw-bold">Category</p>
-						<nav class="nav flex-sm-row flex-md-column  room-category">
-						  <a class="nav-link <?php if($categoryId==10){echo 'active';} ?>" href="team.php?category_id=10">All Rooms/suites</a>					
-						  <a class="nav-link <?php if($categoryId==1){echo 'active';} ?>" href="team.php?category_id=1">Deluxe</a>
-						  <a class="nav-link <?php if($categoryId==2){echo 'active';} ?>" href="team.php?category_id=2">Super Deluxe</a>
-						  <a class="nav-link <?php if($categoryId==3){echo 'active';} ?>" href="team.php?category_id=3">Executive Twine</a>
-						  <a class="nav-link <?php if($categoryId==4){echo 'active';} ?>" href="team.php?category_id=4">Suite</a>
-						  <a class="nav-link <?php if($categoryId==21){echo 'active';} ?>" href="team.php?category_id=21">Swimming Pool</a>
-						  <a class="nav-link <?php if($categoryId==22){echo 'active';} ?>" href="team.php?category_id=22">Meeting room</a>
-						  <a class="nav-link <?php if($categoryId==23){echo 'active';} ?>" href="team.php?category_id=23">Food services</a>
-						  <a class="nav-link <?php if($categoryId==24){echo 'active';} ?>" href="team.php?category_id=24">Spa</a>
-						  <a class="nav-link <?php if($categoryId==25){echo 'active';} ?>" href="team.php?category_id=25">Party Hall</a>
-						  <a class="nav-link <?php if($categoryId==31){echo 'active';} ?>" href="team.php?category_id=31">Others</a>
-						  <a class="nav-link <?php if($categoryId==null){echo 'active';} ?>" href="team.php">Show all</a>
-						</nav>
+						
+						<ul class="nav nav-pills flex-sm-row flex-md-column room-category">
+						  <li class="nav-item">
+						    <a class="nav-link <?php if($categoryId==null){echo 'active';} ?>" aria-current="page" href="gallery.php">Show All</a>
+						  </li>
+						  <li class="nav-item dropdown">
+						    <a class="nav-link dropdown-toggle <?php if($categoryId>=1 and $categoryId<=10 ){echo 'active';} ?>" data-bs-toggle="dropdown" href="gallery.php?category_id=10" role="button" aria-expanded="false">Rooms/suites</a>
+						    <ul class="dropdown-menu">						      
+						      <li><a class="dropdown-item <?php if($categoryId==1){echo 'active';} ?>" href="gallery.php?category_id=1">Deluxe</a></li>
+						      <li><a class="dropdown-item <?php if($categoryId==2){echo 'active';} ?>" href="gallery.php?category_id=2">Super Deluxe</a></li>
+						      <li><a class="dropdown-item <?php if($categoryId==3){echo 'active';} ?>" href="gallery.php?category_id=3">Executive Twine</a></li>
+						      <li><a class="dropdown-item <?php if($categoryId==4){echo 'active';} ?>" href="gallery.php?category_id=4">Suite</a></li>
+						      <li><hr class="dropdown-divider"></li>
+						      <li><a class="dropdown-item <?php if($categoryId==10 ){echo 'active';} ?>"href="gallery.php?category_id=10">All Rooms/suites</a></li>
+						    </ul>
+						  </li>
+						  <li class="nav-item">
+						    <a class="nav-link <?php if($categoryId==21){echo 'active';} ?>" href="gallery.php?category_id=21">Swimming Pool</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="nav-link <?php if($categoryId==22){echo 'active';} ?>" href="gallery.php?category_id=22">Meeting room</a>
+						  </li>
+						  <li class="nav-item">
+						  	<a class="nav-link <?php if($categoryId==23){echo 'active';} ?>" href="gallery.php?category_id=23">Food services</a>
+						  </li>
+						  <li class="nav-item">
+						  	<a class="nav-link <?php if($categoryId==24){echo 'active';} ?>" href="gallery.php?category_id=24">Spa</a>
+						  </li>
+						  <li class="nav-item">
+						  	<a class="nav-link <?php if($categoryId==25){echo 'active';} ?>" href="gallery.php?category_id=25">Party Hall</a>
+						  </li>
+						  <li class="nav-item">
+						  	<a class="nav-link <?php if($categoryId==31){echo 'active';} ?>" href="gallery.php?category_id=31">Others</a>
+						  </li>
+						</ul>
 					</div>
 
 					<div class="col-md-9 col-lg-8 gallery">
