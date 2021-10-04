@@ -114,7 +114,7 @@
 								?>																			
 						<div class="col-sm-10 col-md-9 col-lg-6 card-blk">
 							<div class="card shadow rounded">
-                                <div class="card-body p-0">
+                                <div class="card-body p-0  room-card">
                                     <div class="row">
                                         <div class="col-md-7 card-partition" 
                                         	 style="background-image: url('images/<?php echo $room['room_photo']; ?>');"></div>
@@ -123,7 +123,7 @@
                                             <p class="card-text">Available now: <span><?php echo $room['available']; ?></span></p>
                                             <p class="card-text">Rate: <span><?php echo $room['rate']; ?> BDT per night</span></p>
                                             <p class="card-text">Size: <span><?php echo $room['size']; ?> square feet</span></p>
-                                            <a href="details.php?room_id=<?php echo $room['id']; ?>" class="btn btn-primary btn-sm">View Details</a>
+                                            <a href="details.php?room_id=<?php echo $room['id']; ?>" class="btn btn-sm">View Details</a>
                                         </div>
                                     </div>
                                 </div>

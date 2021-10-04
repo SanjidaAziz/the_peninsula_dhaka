@@ -21,7 +21,7 @@
 				<li class="nav-item "><a class="nav-link <?php if($page=='services'){echo 'active';} ?>" href="services.php">Services</a></li>
 				<li class="nav-item "><a class="nav-link <?php if($page=='about'){echo 'active';} ?>" href="about.php">About</a></li>
 				<li class="nav-item "><a class="nav-link <?php if($page=='contact'){echo 'active';} ?>" href="contact.php">Contact</a></li>
-				<li class="nav-item "><a class="nav-link <?php if($page=='team'){echo 'active';} ?>" href="team.php">Team</a></li>
+				<li class="nav-item "><a class="nav-link <?php if($page=='gallery'){echo 'active';} ?>" href="gallery.php">Gallery</a></li>
 
                 <?php
                     require('functions.php');

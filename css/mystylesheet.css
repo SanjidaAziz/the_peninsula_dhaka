@@ -363,6 +363,22 @@ background-color: #e8e3e5;
   font-weight: normal;
   font-size: 0.9rem;
 }
+.room-card:hover{
+transform: scale(1.1);
+}
+.room-card a{
+
+}
+.room-card a{
+  border-color: rgb(66, 7, 14) !important;
+  border-width: 2px;
+  color: rgb(66, 7, 14);
+}
+.room-card a:hover{
+  background: rgb(66, 7, 14) !important;
+  color: white;
+  font-weight: bold;
+}
 
 /*----------about us-------*/
 
@@ -416,6 +432,46 @@ background-color: #e8e3e5;
     height: 600px;  
   }
 
+  .details .card-body{
+    background: #d9cacb!important
+  }
+
+.details .card-text{
+  font-weight: bold;
+  padding-bottom:10px;
+  margin-bottom: 0px;
+}
+.details .card-title{  
+  font-size: 1.4rem;
+  color: rgb(66, 7, 14);
+  text-shadow: 2px 2px 4px maroon;
+  padding-bottom:15px;
+}
+.details .card-text span{
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+  
+
+ /*-------Gallery section---------*/ 
+.gallery .img-box{
+padding: 5px;
+
+}
+
+.gallery  img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    height: 200px;
+    
+}
+.gallery  img:hover{
+    
+    transform: scale(1.1);
+}
+
 
 
 
@@ -439,7 +495,18 @@ background-color: #e8e3e5;
     
     height: 400px;  
   }
-  
+  .gallery  img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 180px;
+    width: 70%;
+   
+  }
+  .gallery .img-box{
+
+text-align: center;
+}
 
   .schedule .checkin , .checkout , .type , .booking{
     width: 50%;
@@ -469,6 +536,7 @@ background-color: #e8e3e5;
     
     height: 480px;  
   }
+
   
 
 }

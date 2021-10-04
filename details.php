@@ -82,26 +82,16 @@ if (isset($_GET['room_id']) && !empty($_GET['room_id'])){
                             <p class="card-text">Available now: <span><?php echo $room['available']; ?></span></p>
                             <p class="card-text">Rate: <span><?php echo $room['rate']; ?> BDT per night</span></p>
                             <p class="card-text">Size: <span><?php echo $room['size']; ?> square feet</span></p>
+                            <p class="card-text">Details: <span><?php echo $room['room_details']; ?></span></p>
                             
 						  </div>
 						</div>	
 					<?php
+							
 							}
-						} else {
-					?>
-					<div class="alert alert-danger mt-4">
-						<h1>Room Details Not Found. Please ensure you've clicked the right link.</h1>
-					</div>
-					<?php
 						}
-					} else {
+} 
 					?>
-					<div class="alert alert-danger">
-						<h1>Room Details Not Found. Please ensure you've clicked the right link.</h1>
-					</div>
-					<?php } ?>
-					</div>
-
 					
 															
 				

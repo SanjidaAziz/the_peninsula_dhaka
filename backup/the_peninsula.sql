@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2021 at 11:52 PM
+-- Generation Time: Oct 04, 2021 at 02:34 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -110,7 +110,7 @@ INSERT INTO `contact` (`serial_no`, `name`, `email`, `phone`, `message`, `contac
 
 CREATE TABLE `image` (
   `image_id` int(11) NOT NULL,
-  `category_id` int(11) NOT NULL COMMENT '1=deluxe\r\n2=super deluxe\r\n3=executive twine\r\n4=suite',
+  `category_id` int(11) NOT NULL COMMENT '1=deluxe\r\n21=pool\r\n22=meeting room\r\n23=food\r\n24=spa\r\n25=party hall\r\n>30 others\r\n2=super deluxe\r\n3=executive twine\r\n4=suite',
   `image_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -135,7 +135,20 @@ INSERT INTO `image` (`image_id`, `category_id`, `image_name`) VALUES
 (15, 4, 'suite1.jpg'),
 (16, 4, 'suite2.jpg'),
 (17, 4, 'suite3.jpg'),
-(18, 4, 'suite4.jpg');
+(18, 4, 'suite4.jpg'),
+(19, 21, 'pool4.jpg'),
+(20, 21, 'pool2.jpg'),
+(21, 21, 'pool3.jpg'),
+(22, 22, 'meeting.jpg'),
+(23, 22, 'meeting2.jpg'),
+(24, 23, 'food2.jpg'),
+(25, 23, 'dine.jpg'),
+(26, 21, 'pool1.jpg'),
+(27, 21, 'pool5.jpg'),
+(28, 23, 'food1.jpg'),
+(29, 23, 'food3.jpg'),
+(30, 24, 'spa1.jpg'),
+(31, 31, 'lobby.jpg');
 
 -- --------------------------------------------------------
 
@@ -149,18 +162,19 @@ CREATE TABLE `room` (
   `available` int(11) NOT NULL,
   `size` int(11) NOT NULL COMMENT 'in square feet',
   `rate` int(11) NOT NULL COMMENT 'per night',
-  `room_photo` varchar(255) DEFAULT NULL
+  `room_photo` varchar(255) DEFAULT NULL,
+  `room_details` varchar(555) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `room`
 --
 
-INSERT INTO `room` (`id`, `room_type`, `available`, `size`, `rate`, `room_photo`) VALUES
-(1, 'Deluxe', 50, 265, 9500, 'deluxe.jpg'),
-(2, 'Super Deluxe', 20, 350, 10500, 'super_deluxe.jpg'),
-(3, 'Executive Twin', 34, 375, 9000, 'executive_twin.jpg'),
-(4, 'Luxury Suite', 18, 870, 15000, 'suite.jpg');
+INSERT INTO `room` (`id`, `room_type`, `available`, `size`, `rate`, `room_photo`, `room_details`) VALUES
+(1, 'Deluxe', 50, 265, 9500, 'deluxe.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem'),
+(2, 'Super Deluxe', 20, 350, 10500, 'super_deluxe.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem'),
+(3, 'Executive Twin', 34, 375, 9000, 'executive_twin.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem'),
+(4, 'Luxury Suite', 18, 870, 15000, 'suite.jpg', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem');
 
 -- --------------------------------------------------------
 
@@ -290,7 +304,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `room`
